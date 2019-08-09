@@ -18,10 +18,10 @@ Here are some requirements for you to study before you start to dive into this p
 
 ## 1. Syntax and Naming Standards
 The current project is using multiple disciplines and approach from web development world. We have different coding standards for each language that we used in the project. As a developer, study some of the things here.
-**Pug(HTML)**: - [https://pugjs.org/api/getting-started.html](https://pugjs.org/api/getting-started.html)
-**CSS**: - [http://getbem.com/naming/](http://getbem.com/naming/)
-**SCSS(CSS):** - [https://sass-lang.com/documentation/syntax](https://sass-lang.com/documentation/syntax)
-**Javascript**: - [https://github.com/airbnb/javascript](https://github.com/airbnb/javascript)
+- **Pug(HTML)**: - [https://pugjs.org/api/getting-started.html](https://pugjs.org/api/getting-started.html)
+- **CSS**: - [http://getbem.com/naming/](http://getbem.com/naming/)
+- **SCSS(CSS):** - [https://sass-lang.com/documentation/syntax](https://sass-lang.com/documentation/syntax)
+- **Javascript**: - [https://github.com/airbnb/javascript](https://github.com/airbnb/javascript)
 
 
 ## 2. File Structure
