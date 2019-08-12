@@ -22,7 +22,7 @@ Here are some requirements for you to study before you start to dive into this p
   - [1.3. File Structure](#13-file-structure)
 
 ## 1.2. Syntax and Naming Standards
-The current project is using multiple disciplines and approach from web development world. We have different coding standards for each language that we used in the project. As a developer, study some of the things here.
+The current project is using multiple disciplines and approach from web development world. We have different coding standards for each language that we used in the project. As a developer, you need to study some of the things here to maintain a readable code to ensure the future progress of this project.
 - **Pug(HTML)**: - [https://pugjs.org/api/getting-started.html](https://pugjs.org/api/getting-started.html)
 - **CSS**: - [http://getbem.com/naming/](http://getbem.com/naming/)
 - **SCSS(CSS):** - [https://sass-lang.com/documentation/syntax](https://sass-lang.com/documentation/syntax)
