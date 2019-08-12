@@ -1,5 +1,5 @@
 `**NOTE**: In Progress, there might be some changes to work on while the development of the project is ongoing`
-# 1. YourQS - Developers' Guide
+# YourQS - Developers' Guide
 
 Hello Aspire2 Students / Developers!
 
@@ -14,7 +14,7 @@ Here are some requirements for you to study before you start to dive into this p
 - Bootstrap 4
 
 ## 1.1. Table of Contents
-- [1. YourQS - Developers' Guide](#1-yourqs---developers-guide)
+- [YourQS - Developers' Guide](#yourqs---developers-guide)
   - [1.1. Table of Contents](#11-table-of-contents)
   - [1.2. Syntax and Naming Standards](#12-syntax-and-naming-standards)
   - [1.3. File Structure](#13-file-structure)
@@ -25,9 +25,10 @@ The current project is using multiple disciplines and approach from web developm
 - **CSS**: - [http://getbem.com/naming/](http://getbem.com/naming/)
 - **SCSS(CSS):** - [https://sass-lang.com/documentation/syntax](https://sass-lang.com/documentation/syntax)
 - **Javascript**: - [https://github.com/airbnb/javascript](https://github.com/airbnb/javascript)
+- **Model Definitions** - https://sequelize.org/master/manual/models-definition.html
 
 
 ## 1.3. File Structure
 
-The file explorer is accessible using the button in left corner of the navigation bar. You can create a new file by clicking the **New file** button in the file explorer. You can also create folders by clicking the **New folder** button.
+`**The file structure is under construction yet. this part will change constantly while the project is ongoing**`
 
