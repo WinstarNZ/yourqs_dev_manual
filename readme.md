@@ -1,6 +1,7 @@
 `**NOTE**: In Progress, there might be some changes to work on while the development of the project is ongoing`
 # YourQS - Developers' Guide
 
+## Getting Started
 Hello Aspire2 Students / Developers!
 
 You probably landed on the **QS Collector project** from YourQS.
@@ -15,6 +16,7 @@ Here are some requirements for you to study before you start to dive into this p
 
 ## 1.1. Table of Contents
 - [YourQS - Developers' Guide](#yourqs---developers-guide)
+  - [Getting Started](#getting-started)
   - [1.1. Table of Contents](#11-table-of-contents)
   - [1.2. Syntax and Naming Standards](#12-syntax-and-naming-standards)
   - [1.3. File Structure](#13-file-structure)
