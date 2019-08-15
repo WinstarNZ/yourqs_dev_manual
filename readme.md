@@ -68,4 +68,4 @@ In a nutshell, the diagram above shows:
       - `Hard LandScape` Model
   > All of the models mentioned are belongs to `Project` Model.
 
-We designed this model architecture so that, it can be modular if some section of the project needs modification.The team decided not to put it on a JSON datatype because of the limitation of MSSQL Database that was integrated to our app.
+We designed this model architecture so that, it can be modular if some section of the project scope form needs modification.The team decided not to put it on a JSON datatype because of the limitation of MSSQL Database that was integrated to our app.
