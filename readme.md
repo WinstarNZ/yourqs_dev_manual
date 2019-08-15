@@ -42,9 +42,7 @@ The current project is using multiple disciplines and approach from web developm
 
 Each developer must be reminded that these are the foundation of our database.
 
-<center>
-<img src="extras/models-visual.jpg">
-</center>
+<img src="extras/models-visual.jpg" style="max-width: 100%;">
 
 In a nutshell, the diagram above shows:
 - A `User` can have a `Role`.
