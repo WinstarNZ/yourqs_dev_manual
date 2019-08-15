@@ -55,17 +55,17 @@ In a nutshell, the diagram above shows:
   - `TemporaryService` Model
   - `ProfessionalServicesAllowance` Model
   - `Interior` Model
+    - An `Interior` Model can only have one: 
+      - `WindowAndDoor` Model
+      - `InteriorFinish` Model
+      - `JoineryAllowance` Model
+      - `Plumbing` Model
+      - `Electrical` Model
+      - `Drainage` Model
+      - `Other` Model
   - `Exterior` Model
-  > All of the models mentioned are belongs to `Project` Model
-- An `Interior` Model can only have one: 
-  - `WindowAndDoor` Model
-  - `InteriorFinish` Model
-  - `JoineryAllowance` Model
-  - `Plumbing` Model
-  - `Electrical` Model
-  - `Drainage` Model
-  - `Other` Model
+    - An `Exterior` Model can only have one: 
+      - `Hard LandScape` Model
+  > All of the models mentioned are belongs to `Project` Model.
 
-  > All of the models mentioned are belongs to `Interior` Model
-- An `Exterior` Model can only have one: 
-  - `Hard LandScape` Model
+We designed this model architecture so that, it can be modular if some section of the project needs modification.The team decided not to put it on a JSON datatype because of the limitation of MSSQL Database that was integrated to our app.
