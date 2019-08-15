@@ -41,9 +41,11 @@ The current project is using multiple disciplines and approach from web developm
  On the diagram below, shows the visualisation of relationships for each model that we define to our express app.
 
 Each developer must be reminded that these are the foundation of our database.
+
 <center>
 <img src="extras/models-visual.jpg">
 </center>
+
 In a nutshell, the diagram above shows:
 - A `User` can have a `Role`.
 - A `User` can have multiple `Project`s
