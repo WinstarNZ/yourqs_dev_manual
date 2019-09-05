@@ -17,15 +17,33 @@ Here are some requirements for you to study before you start to dive into this p
 - ES6
 - Bootstrap 4
 
+## Setup
+
+Prequisites for our web application:
+1. Node 10.16.x
+2. Git
+3. MSSQL 2017 Developer Edition & Install SMSS
+    >Note: We provided an installer for you. you can download it [here]()
+4. Visual Studio Code (can be any text editor that you preferred)
+
+> After Installing MSSQL, We will enable SQL Authentication
+1. Open MSSQL **opening on start button image will be placed here
+2. A modal will appear ** image here
+3. put "." as a Server Name and click Connect Button
+4. Right Click on SQL Instance "." > Click Properties ** image here
+5. A popup window will appear > under "Select a Page" list click "Security" and follow these configuration.
+
+
 ## 1.1. Table of Contents
 
 - [YourQS - Developers' Guide](#yourqs---developers-guide)
   - [Getting Started](#getting-started)
+  - [Setup](#setup)
   - [1.1. Table of Contents](#11-table-of-contents)
   - [1.2. Syntax and Naming Standards](#12-syntax-and-naming-standards)
   - [1.3. File Structure](#13-file-structure)
-  - [1.3. Models Visualisation](#13-models-visualisation)
-
+  - [1.4. Models Visualisation](#13-models-visualisation)
+  - [1.5. Setup](#13-models)
 ## 1.2. Syntax and Naming Standards
 
 The current project is using multiple disciplines and approach from web development world. We have different coding standards for each language that we used in the project. As a developer, you need to study some of the things here to maintain a readable code to ensure the future progress of this project.
@@ -40,7 +58,7 @@ The current project is using multiple disciplines and approach from web developm
 
 `**The file structure is under construction yet. this part will change constantly while the project is ongoing**`
 
-## 1.3. Models Visualisation
+## 1.4. Models Visualisation
 
 YourQS Project Scope Form can have a lot of data involved. We created this visualisation in order for the team can visualise its models.
 
