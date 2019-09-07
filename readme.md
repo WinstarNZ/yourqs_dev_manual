@@ -95,7 +95,7 @@ Assuming we have successfully enabled MSSQL. We will enable SQL Authentication f
 
 11.  run `node_modules/.bin/sequelize db:seed:all` - to initialize all initial data needed for the app to open
 	More information about sequelize migrations [here](https://sequelize.org/master/manual/migrations.html)
-12. run npm start - to start application
+12. run `npm start` - to start application
 
 ## 1.2. Coding Standards - Syntax and Naming Standards
 
