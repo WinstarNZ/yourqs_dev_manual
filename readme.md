@@ -38,19 +38,21 @@ Prequisites for our web application:
 1. Node 10.16.x
 2. Git
 3. MSSQL 2017 Developer Edition & Install SMSS
-    >Note: We provided an installer for you. you can download it [here](https://drive.google.com/open?id=18WV9k-uKgz79c869GAs4QrJlXtV4Tm5S)
+    > **Note**:<br> We provided an installer for you. you can download it [here](https://drive.google.com/open?id=18WV9k-uKgz79c869GAs4QrJlXtV4Tm5S)
 4. Visual Studio Code (can be any text editor that you preferred)
 
 ## MSSQL - SETUP
 Assuming we have successfully enabled MSSQL. We will enable SQL Authentication for enable us to connect any web application to this database environment.
-1. Open MSSQL
-   <img src="extras/screenshots/open-sql.png">
-2. A modal will appear
-3. put `.` as a `Server Name` and click `Connect` Button
-4. Right Click on SQL Instance "." > Click Properties
-   <img src="extras/screenshots/2-sql.png">
-5. A popup window will appear > under "Select a Page" list click "Security" and follow these configuration.
-   <img src="extras/screenshots/3-sql.png">
+   1. Open MSSQL
+      <img src="extras/screenshots/open-sql.png">
+   2. A modal will appear
+   3. put `.` as a `Server Name` and click `Connect` Button
+   4. Right Click on SQL Instance "." > Click Properties.
+      <br>
+      <img src="extras/screenshots/2-sql.png">
+   5. A popup window will appear > under "Select a Page" list click "Security" and follow these configuration.
+      <br>
+      <img src="extras/screenshots/3-sql.png">
 
 ## Database - Setup
   1. Create a new database.
