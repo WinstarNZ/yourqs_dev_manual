@@ -17,34 +17,85 @@ Here are some requirements for you to study before you start to dive into this p
 - ES6
 - Bootstrap 4
 
-## Setup
+
+## Table of Contents
+
+- [YourQS - Developers' Guide](#yourqs---developers-guide)
+  - [Getting Started](#getting-started)
+  - [Table of Contents](#table-of-contents)
+  - [Environment Setup](#environment-setup)
+  - [MSSQL - SETUP](#mssql---setup)
+  - [Database - Setup](#database---setup)
+  - [Enable Login Access using SQL Authentication](#enable-login-access-using-sql-authentication)
+  - [Installation of QS Collector](#installation-of-qs-collector)
+  - [1.2. Coding Standards - Syntax and Naming Standards](#12-coding-standards---syntax-and-naming-standards)
+  - [1.3. File Structure](#13-file-structure)
+  - [1.4. Models Visualisation](#14-models-visualisation)
+
+## Environment Setup
 
 Prequisites for our web application:
 1. Node 10.16.x
 2. Git
 3. MSSQL 2017 Developer Edition & Install SMSS
-    >Note: We provided an installer for you. you can download it [here]()
+    >Note: We provided an installer for you. you can download it [here](https://drive.google.com/open?id=18WV9k-uKgz79c869GAs4QrJlXtV4Tm5S)
 4. Visual Studio Code (can be any text editor that you preferred)
 
-> After Installing MSSQL, We will enable SQL Authentication
-1. Open MSSQL **opening on start button image will be placed here
-2. A modal will appear ** image here
-3. put "." as a Server Name and click Connect Button
-4. Right Click on SQL Instance "." > Click Properties ** image here
+## MSSQL - SETUP
+Assuming we have successfully enabled MSSQL. We will enable SQL Authentication for enable us to connect any web application to this database environment.
+1. Open MSSQL
+   <img src="extras/screenshots/open-sql.png">
+2. A modal will appear
+3. put `.` as a `Server Name` and click `Connect` Button
+4. Right Click on SQL Instance "." > Click Properties
+   <img src="extras/screenshots/2-sql.png">
 5. A popup window will appear > under "Select a Page" list click "Security" and follow these configuration.
+   <img src="extras/screenshots/3-sql.png">
 
+## Database - Setup
+  1. Create a new database.
+  <img src="extras/screenshots/4-sql.png">
+  2. Put your desired `Database Name`
+  <img src="extras/screenshots/5-sql.png">
+  3. On options set your `Collation` as `SQL_Latin1_General_CP1_CS_AS`
+  <img src="extras/screenshots/6-sql.png">
 
-## 1.1. Table of Contents
+## Enable Login Access using SQL Authentication
+   1. On right-clicking on Security/*user_name*
+   2. Click Properties
+   3. Go on Status and configure based on this image:
+   <img src="extras/screenshots/7-sql.png">
 
-- [YourQS - Developers' Guide](#yourqs---developers-guide)
-  - [Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [1.1. Table of Contents](#11-table-of-contents)
-  - [1.2. Syntax and Naming Standards](#12-syntax-and-naming-standards)
-  - [1.3. File Structure](#13-file-structure)
-  - [1.4. Models Visualisation](#13-models-visualisation)
-  - [1.5. Setup](#13-models)
-## 1.2. Syntax and Naming Standards
+## Installation of QS Collector
+
+1. Clone the qs-collector**link repository on github.
+2. Open the project on `Visual Studio` or any text editor.
+3. duplicate `.env.sample` and rename the duplicated file into `.env`
+4. follow these environment variables here **link
+5. duplicate `config.json.sample` and rename the duplicated file into `config.json`
+6. based on your setup of the database on SQL Server, you should match the credentials on `config.json`
+7. run `npm install` - to install dependencies of our web application.
+8. run `node_modules/.bin/sequelize db:migrate` - to migrate the database schema to your MSSQL server
+  
+  > **NOTE**: if you have error: failed to connect to localhost:1433.	
+- please enable your tcp port by following instructions [here](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port?view=sql-server-2017)
+  
+- then, restart computer
+  
+> **NOTE**: if you have error: failed to login as 'some_user_here':
+
+- please enable SQL Authentication & Grant Access on your user by following instructions [here](#enable-login-access-using-sql-authentication)
+- To make sure everything is working, change your password on your 'sa' user on SQL Management Studio
+
+9. On `.env` file, set your environment variable `SEQUELIZE_FORCE_SYNC_SCHEMA="ON"` and run 'npm start' and follow the instructions indicated <br><br>**OR** &nbsp;&nbsp;proceed on next step.
+
+10.  Set your `SEQUELIZE_FORCE_SYNC_SCHEMA="OFF"` on your environment variables(/.env).
+
+11.  run `node_modules/.bin/sequelize db:seed:all` - to initialize all initial data needed for the app to open
+	More information about sequelize migrations [here](https://sequelize.org/master/manual/migrations.html)
+12. run npm start - to start application
+
+## 1.2. Coding Standards - Syntax and Naming Standards
 
 The current project is using multiple disciplines and approach from web development world. We have different coding standards for each language that we used in the project. As a developer, you need to study some of the things here to maintain a readable code to ensure the future progress of this project.
 
