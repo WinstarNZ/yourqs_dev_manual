@@ -44,6 +44,7 @@ Prequisites for our web application:
 ## MSSQL - SETUP
 Assuming we have successfully enabled MSSQL. We will enable SQL Authentication for enable us to connect any web application to this database environment.
    1. Open MSSQL
+      <br>
       <img src="extras/screenshots/open-sql.png">
    2. A modal will appear
    3. put `.` as a `Server Name` and click `Connect` Button
