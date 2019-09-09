@@ -70,10 +70,10 @@ Assuming we have successfully enabled MSSQL. We will enable SQL Authentication f
 
 ## Installation of QS Collector
 
-1. Clone the qs-collector**link repository on github.
+1. Clone the [qs-collector](https://github.com/yourqs-team/qs-collector) repository on github.
 2. Open the project on `Visual Studio` or any text editor.
 3. duplicate `.env.sample` and rename the duplicated file into `.env`
-4. follow these environment variables here **link
+4. follow these environment variables [here](https://gist.github.com/roaldjap/cb7f621d905231cd106637f5f7263e2e)
 5. duplicate `config.json.sample` and rename the duplicated file into `config.json`
 6. based on your setup of the database on SQL Server, you should match the credentials on `config.json`
 7. run `npm install` - to install dependencies of our web application.
