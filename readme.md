@@ -131,7 +131,8 @@ The current project is using multiple disciplines and approach from web developm
     package-lock.json
     package.json              # scripts / dependencies for our app.
     webpack.config.json       # use it as a compiler for our static files like `sass`
-
+  
+  Our file structure was based on typical express app. Initially it was generated using `express-generator` and we architect and structured node modules needed for the development that was enlisted on inside `package.json`
 
 
 
