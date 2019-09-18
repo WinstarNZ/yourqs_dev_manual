@@ -81,7 +81,10 @@ Prequisites for our web application:
 The current project is using multiple disciplines and approach from web development world. We have different coding standards for each language that we used in the project. As a developer, you need to study some of the things here to maintain a readable code to ensure the future progress of this project.
 
 - **Pug(HTML)**: - [https://pugjs.org/api/getting-started.html](https://pugjs.org/api/getting-started.html)
-- **CSS**: - [http://getbem.com/naming/](http://getbem.com/naming/)
+
+-  **Bootstrap** 
+     - https://medium.com/ableneo/theming-guidelines-customize-bootstrap-of-other-toolkits-f11fb9dd0a87
+     - https://getbootstrap.com/
 - **SCSS(CSS):** - [https://sass-lang.com/documentation/syntax](https://sass-lang.com/documentation/syntax)
 - **Javascript**: - [https://github.com/airbnb/javascript](https://github.com/airbnb/javascript)
 - **Model Definitions** - https://sequelize.org/master/manual/models-definition.html
