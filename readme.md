@@ -23,7 +23,7 @@ Here are some requirements for you to study before you start to dive into this p
 - [YourQS - Developers' Guide](#yourqs---developers-guide)
   - [Getting Started](#getting-started)
   - [Table of Contents](#table-of-contents)
-  - [Environment Setup](#environment-setup)
+  - [Machine Environment Setup](#machine-environment-setup)
   - [1.1 Installation of QS Collector](#11-installation-of-qs-collector)
   - [1.2. Coding Standards - Syntax and Naming Standards](#12-coding-standards---syntax-and-naming-standards)
   - [1.3. File Structure](#13-file-structure)
@@ -37,7 +37,7 @@ Here are some requirements for you to study before you start to dive into this p
     - [1.5.3 Database - Setup](#153-database---setup)
     - [1.5.4 Enable Login Access using SQL Authentication](#154-enable-login-access-using-sql-authentication)
 
-## Environment Setup
+## Machine Environment Setup
 
 Prequisites for our web application:
 1. Node 10.16.x
@@ -52,7 +52,7 @@ Prequisites for our web application:
 ## 1.1 Installation of QS Collector
 
 1. Clone the [qs-collector](https://github.com/yourqs-team/qs-collector) repository on github.
-2. Open the project on `Visual Studio` or any text editor.
+2. Open the project on `Visual Studio`
 3. duplicate `.env.sample` and rename the duplicated file into `.env`
 4. follow these environment variables [here](https://gist.github.com/roaldjap/cb7f621d905231cd106637f5f7263e2e)
 5. duplicate `config.json.sample` and rename the duplicated file into `config.json`
