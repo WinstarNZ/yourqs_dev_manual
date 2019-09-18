@@ -50,7 +50,7 @@ Prequisites for our web application:
 ## 1.1 Installation of QS Collector
 
 1. Clone the [qs-collector](https://github.com/yourqs-team/qs-collector) repository on github.
-2. Open the project on `Visual Studio`
+2. Open the project on `Visual Studio Code`
 3. duplicate `.env.sample` and rename the duplicated file into `.env`
 4. follow these environment variables [here](https://gist.github.com/roaldjap/cb7f621d905231cd106637f5f7263e2e)
 5. duplicate `config.json.sample` and rename the duplicated file into `config.json`
