@@ -67,7 +67,7 @@ Prequisites for our web application:
   
 > **NOTE**: if you have error: failed to login as 'some_user_here':
 
-- please enable SQL Authentication & Grant Access on your user by following instructions [here]((#154-enable-login-access-using-sql-authentication))
+- please enable SQL Authentication & Grant Access on your user by following instructions [here](#154-enable-login-access-using-sql-authentication)
 - To make sure everything is working, change your password on your 'sa' user on SQL Management Studio
 
 9. On `.env` file, set your environment variable `SEQUELIZE_FORCE_SYNC_SCHEMA="ON"` and run 'npm start' and follow the instructions indicated <br><br>**OR** &nbsp;&nbsp;proceed on next step.
