@@ -30,6 +30,7 @@ Here are some requirements for you to study before you start to dive into this p
   - [Installation of QS Collector](#installation-of-qs-collector)
   - [1.2. Coding Standards - Syntax and Naming Standards](#12-coding-standards---syntax-and-naming-standards)
   - [1.3. File Structure](#13-file-structure)
+    - [Top-level directory structure of our QS Collector](#top-level-directory-structure-of-our-qs-collector)
   - [1.4. Models Visualisation](#14-models-visualisation)
 
 ## Environment Setup
@@ -110,7 +111,30 @@ The current project is using multiple disciplines and approach from web developm
 
 ## 1.3. File Structure
 
-`**The file structure is under construction yet. this part will change constantly while the project is ongoing**`
+### Top-level directory structure of our QS Collector
+
+    .
+    ├── bin                   # bin/ folder contains `www` which holds the server file to run `app.js`
+    ├── config                # config/ folder should contain database configuration(config.json).
+    ├── controllers           # managing the data of the application that comes from `views` to `models` and vice versa.
+    ├── handlers              # used for handling node modules and plugins that can be reused on other JS files
+    ├── migrations            # contain `sequelize` scripts for database schema
+    ├── models                # contain models we define in `sequelize` -
+    ├── public                # contain static files such as image/js/sass(css)/plugins
+    ├── routes                # contain index.js where it contains different routes for your `contollers`
+    ├── seeders               # contain scripts for generating initial data for our application
+    ├── views                 # contain your .pug(html) files / Front End
+    .env.sample               # should be duplicated as `.env` and fill your environment variables/credentials
+    .gitignore                # contains ignored files in git
+    app.js                    # This is we invoke and initialize our `express` app / node modules and run it. 
+    helpers.js                
+    package-lock.json
+    package.json              # scripts / dependencies for our app.
+    webpack.config.json       # use it as a compiler for our static files like `sass`
+
+
+
+
 
 ## 1.4. Models Visualisation
 
