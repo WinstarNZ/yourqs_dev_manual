@@ -24,53 +24,32 @@ Here are some requirements for you to study before you start to dive into this p
   - [Getting Started](#getting-started)
   - [Table of Contents](#table-of-contents)
   - [Environment Setup](#environment-setup)
-  - [MSSQL - SETUP](#mssql---setup)
-  - [Database - Setup](#database---setup)
-  - [Enable Login Access using SQL Authentication](#enable-login-access-using-sql-authentication)
-  - [Installation of QS Collector](#installation-of-qs-collector)
+  - [1.1 Installation of QS Collector](#11-installation-of-qs-collector)
   - [1.2. Coding Standards - Syntax and Naming Standards](#12-coding-standards---syntax-and-naming-standards)
   - [1.3. File Structure](#13-file-structure)
-    - [Top-level directory structure of our QS Collector](#top-level-directory-structure-of-our-qs-collector)
+    - [1.3.1 Top-level directory structure of our QS Collector](#131-top-level-directory-structure-of-our-qs-collector)
+    - [1.3.2 File Naming Convention for Controllers](#132-file-naming-convention-for-controllers)
+    - [1.3.3 File Naming Convention for Views](#133-file-naming-convention-for-views)
+    - [1.3.4 File Naming Convention for Models](#134-file-naming-convention-for-models)
   - [1.4. Models Visualisation](#14-models-visualisation)
+  - [1.5 Extra Configurations / Setup](#15-extra-configurations--setup)
+    - [1.5.1 MSSQL - SETUP](#151-mssql---setup)
+    - [1.5.3 Database - Setup](#153-database---setup)
+    - [1.5.4 Enable Login Access using SQL Authentication](#154-enable-login-access-using-sql-authentication)
 
 ## Environment Setup
 
 Prequisites for our web application:
 1. Node 10.16.x
-2. Git
+2. Git / Github
 3. MSSQL 2017 Developer Edition & Install SMSS
-    > **Note**:<br> We provided an installer for you. you can download it [here](https://drive.google.com/open?id=18WV9k-uKgz79c869GAs4QrJlXtV4Tm5S)
+    > **Note**:<br> We provided an installer for you and we prepare how you should set it up using `instructions.txt`. you can download it [here](https://drive.google.com/open?id=18WV9k-uKgz79c869GAs4QrJlXtV4Tm5S)
+    
+    > **After your setup is complete:** Please proceed [here](#151-mssql---setup) then [here](#153-database---setup)
 4. Visual Studio Code (can be any text editor that you preferred)
 
-## MSSQL - SETUP
-Assuming we have successfully enabled MSSQL. We will enable SQL Authentication for enable us to connect any web application to this database environment.
-   1. Open MSSQL
-      <br>
-      <img src="extras/screenshots/open-sql.png">
-   2. A modal will appear
-   3. put `.` as a `Server Name` and click `Connect` Button
-   4. Right Click on SQL Instance "." > Click Properties.
-      <br>
-      <img src="extras/screenshots/2-sql.png">
-   5. A popup window will appear > under "Select a Page" list click "Security" and follow these configuration.
-      <br>
-      <img src="extras/screenshots/3-sql.png">
 
-## Database - Setup
-  1. Create a new database.
-  <img src="extras/screenshots/4-sql.png">
-  2. Put your desired `Database Name`
-  <img src="extras/screenshots/5-sql.png">
-  3. On options set your `Collation` as `SQL_Latin1_General_CP1_CS_AS`
-  <img src="extras/screenshots/6-sql.png">
-
-## Enable Login Access using SQL Authentication
-   1. On right-clicking on Security/*user_name*
-   2. Click Properties
-   3. Go on Status and configure based on this image:
-   <img src="extras/screenshots/7-sql.png">
-
-## Installation of QS Collector
+## 1.1 Installation of QS Collector
 
 1. Clone the [qs-collector](https://github.com/yourqs-team/qs-collector) repository on github.
 2. Open the project on `Visual Studio` or any text editor.
@@ -88,7 +67,7 @@ Assuming we have successfully enabled MSSQL. We will enable SQL Authentication f
   
 > **NOTE**: if you have error: failed to login as 'some_user_here':
 
-- please enable SQL Authentication & Grant Access on your user by following instructions [here](#enable-login-access-using-sql-authentication)
+- please enable SQL Authentication & Grant Access on your user by following instructions [here]((#154-enable-login-access-using-sql-authentication))
 - To make sure everything is working, change your password on your 'sa' user on SQL Management Studio
 
 9. On `.env` file, set your environment variable `SEQUELIZE_FORCE_SYNC_SCHEMA="ON"` and run 'npm start' and follow the instructions indicated <br><br>**OR** &nbsp;&nbsp;proceed on next step.
@@ -111,19 +90,19 @@ The current project is using multiple disciplines and approach from web developm
 
 ## 1.3. File Structure
 
-### Top-level directory structure of our QS Collector
+### 1.3.1 Top-level directory structure of our QS Collector
 
     .
-    ├── bin                   # bin/ folder contains `www` which holds the server file to run `app.js`
-    ├── config                # config/ folder should contain database configuration(config.json).
-    ├── controllers           # managing the data of the application that comes from `views` to `models` and vice versa.
-    ├── handlers              # used for handling node modules and plugins that can be reused on other JS files
-    ├── migrations            # contain `sequelize` scripts for database schema
-    ├── models                # contain models we define in `sequelize` -
-    ├── public                # contain static files such as image/js/sass(css)/plugins
-    ├── routes                # contain index.js where it contains different routes for your `contollers`
-    ├── seeders               # contain scripts for generating initial data for our application
-    ├── views                 # contain your .pug(html) files / Front End
+    ├── bin/                   # bin/ folder contains `www` which holds the server file to run `app.js`
+    ├── config/                # config/ folder should contain database configuration(config.json).
+    ├── controllers/           # managing the data of the application that comes from `views` to `models` and vice versa.
+    ├── handlers/              # used for handling node modules and plugins that can be reused on other JS files
+    ├── migrations/            # contain `sequelize` scripts for database schema
+    ├── models/                # contain models we define in `sequelize` -
+    ├── public/                # contain static files such as image/js/sass(css)/plugins
+    ├── routes/                # contain index.js where it contains different routes for your `contollers`
+    ├── seeders/               # contain scripts for generating initial data for our application
+    ├── views/                 # contain your .pug(html) files / Front End
     .env.sample               # should be duplicated as `.env` and fill your environment variables/credentials
     .gitignore                # contains ignored files in git
     app.js                    # This is we invoke and initialize our `express` app / node modules and run it. 
@@ -135,7 +114,76 @@ The current project is using multiple disciplines and approach from web developm
   Our file structure was based on typical express app. Initially it was generated using `express-generator` and we architect and structured node modules needed for the development that was enlisted on inside `package.json`
 
 
+### 1.3.2 File Naming Convention for Controllers
+  Our `controllers/` was based on features that we implement. We define it like this `(feature)Controller.js`
+  The following examples below our current features that we have on our `qs-collector` app.
+  ```
+  ├── controllers
+        ├─ changePasswordController.js
+        ├─ changeProfileController.js
+        ├─ dashboardController.js
+        ├─ loginController.js
+        ├─ pdfGenController.js
+        ├─ registerController.js
+        ├─ sampleController.js          
+        ├─ userController.js            # Update User Profile Feature
+  ```
 
+  inside of each controller uses different ES6 functions. we used async / await functions to avoid nested then() / catch() OR try() / catch() method chains.
+
+  We call these methods inside `routes/index.js`. When we say `routes` we are referring to only one file. we strictly put it inside in one file for us to visualise the overall RESTful API that we used in our `qs-collector` app.
+
+### 1.3.3 File Naming Convention for Views
+  Our `views/` usually consisted a lot of webpages but using `.pug` we are able to minimize the pain of reading HTML Enclosure tags and make it readable for the incoming developers of `qs-collector`.
+
+  Usually we call these pages coming from our `controllers` inside a function `res.render('pug_filename') - without the .pug`
+
+
+  ```
+    ├── views/ 
+        ├─ dashboard/                 # Consists of Dashboard Components that we call in `dashboard-layout`
+        ├─ email-templates/           # Email Templates that we use for email notifications
+        ├─ mixins/                    # Some reusable templates that we can use to other pages
+        ├─ modals/                    # modals that we can use
+        ├─ pdf-templates/             # All PDF Related templates
+        - dashboard-layout.pug        # Main layout for our dashboard
+        - editProject.pug
+        - editUser.pug
+        - error.pug                   # Not Found Pages - 404 / Error Catcher.
+        - forgotPasswordForm.pug
+        - index.pug
+        - layout.pug                  # Main layout for register / login feature.
+        - login.pug
+        - projects.pug
+        - register.pug
+  ```
+
+### 1.3.4 File Naming Convention for Models
+  We name our `models/` based on ERD that we have on [Models Visualisation](#14-models-visualisation).
+  ```
+    ├── models 
+        ├─ Allowance_and_Insurance.js 
+        ├─ Drainage.js
+        ├─ Electrical.js
+        ├─ Exterior.js
+        ├─ Hard_landscaping.js
+        ├─ index.js                      # Don't touch / edit this. We use this index.js to connect to our config/index.js dynamically.
+        ├─ Interior_finish.js
+        ├─ Interior_trim.js
+        ├─ Joinery_allowance.js
+        ├─ Manpower.js
+        ├─ Other.js
+        ├─ Plumbing.js
+        ├─ Proffessional_service.js
+        ├─ Project.js
+        ├─ role.js
+        ├─ Safety_requirement.js
+        ├─ sessions.js                   # used to save sessions to our server side. mostly using currently in login & logout feature
+        ├─ Site_arrangement.js
+        ├─ Temporary_service.js
+        ├─ users.js
+        ├─ Windows_and_door.js  
+  ```
 
 ## 1.4. Models Visualisation
 
@@ -173,3 +221,32 @@ In a nutshell, the diagram above shows:
       > All of the models mentioned are belongs to `Project` Model.
 
 We designed this model architecture so that, it can be modular if some section of the project scope form needs modification.The team decided not to put it on a JSON datatype because of the limitation of MSSQL Database that was integrated to our app.
+
+## 1.5 Extra Configurations / Setup
+### 1.5.1 MSSQL - SETUP
+Assuming we have successfully installed MSSQL. We will enable SQL Authentication for enable us to connect any web application to this database environment.
+   1. Open MSSQL
+      <br>
+      <img src="extras/screenshots/open-sql.png">
+   2. A modal will appear
+   3. put `.` as a `Server Name` and click `Connect` Button
+   4. Right Click on SQL Instance "." > Click Properties.
+      <br>
+      <img src="extras/screenshots/2-sql.png">
+   5. A popup window will appear > under "Select a Page" list click "Security" and follow these configuration.
+      <br>
+      <img src="extras/screenshots/3-sql.png">
+
+### 1.5.3 Database - Setup
+  1. Create a new database.
+  <img src="extras/screenshots/4-sql.png">
+  2. Put your desired `Database Name`
+  <img src="extras/screenshots/5-sql.png">
+  3. On options set your `Collation` as `SQL_Latin1_General_CP1_CS_AS`
+  <img src="extras/screenshots/6-sql.png">
+
+### 1.5.4 Enable Login Access using SQL Authentication
+   1. On right-clicking on Security/*user_name*
+   2. Click Properties
+   3. Go on Status and configure based on this image:
+   <img src="extras/screenshots/7-sql.png">
