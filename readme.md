@@ -1,5 +1,3 @@
-`**NOTE**: In Progress, there might be some changes to work on while the development of the project is ongoing`
-
 # YourQS - Developers' Guide
 
 ## Getting Started
