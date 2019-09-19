@@ -69,7 +69,7 @@ Prequisites for our web application:
 - To make sure everything is working, change your password on your 'sa' user on SQL Management Studio
 
 9. On `.env` file, set your environment variable `SEQUELIZE_FORCE_SYNC_SCHEMA="ON"` and run 'npm start' and follow the instructions indicated <br><br>**OR** &nbsp;&nbsp;proceed on next step.
-
+  > **Important Note :** Don't do this on production. It will destroy all of the data that you currently have in your database. So make sure if you turn **SEQUELIZE_FORCE_SYNC_SCHEMA="ON"** - make sure you know what you're doing.
 10.  Set your `SEQUELIZE_FORCE_SYNC_SCHEMA="OFF"` on your environment variables(/.env).
 
 11.  run `node_modules/.bin/sequelize db:seed:all` - to initialize all initial data needed for the app to open
