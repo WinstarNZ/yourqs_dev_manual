@@ -53,8 +53,9 @@ Prequisites for our web application:
 2. Open the project on `Visual Studio Code`
 3. duplicate `.env.sample` and rename the duplicated file into `.env`
 4. follow these environment variables [here](https://gist.github.com/roaldjap/cb7f621d905231cd106637f5f7263e2e)
-5. duplicate `config.json.sample` and rename the duplicated file into `config.json`
-6. based on your setup of the database on SQL Server, you should match the credentials on `config.json`
+5. open your `.env` file.
+6. based on your setup of the database on SQL Server, you should match the credentials on `DATABASE_URL` environment name with the following format:
+    ```mssql://[user[:password]@][host][:port][/dbname]```
 7. run `npm install` - to install dependencies of our web application.
 8. run `node_modules/.bin/sequelize db:migrate` - to migrate the database schema to your MSSQL server
   
